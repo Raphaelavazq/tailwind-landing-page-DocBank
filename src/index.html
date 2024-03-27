@@ -1,18 +1,315 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/output.css" rel="stylesheet">
+    
+    <title>DocBank</title>
 
-    <title>Tailwind Boilerplate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="/dist/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-slate-900">
-    <main class="container mx-auto">
-      <section class="bg-slate-100 flex justify-center">
-        <h1 class="text-5xl text-blue-700 p-4 font-bold">Hello World!</h1>
+
+  <body class="font-space-grotesk">
+    <!--==================== HEADER ====================-->
+    <header class="mx-4 sm:mx-6 lg:mx-8">
+      <nav class="flex items-center justify-between w-full px-4 py-3 relative">
+          <div class="flex items-center gap-1.5 font-bold text-black">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c65eb99174b270e3f681f8e8767961ecf5b43a21c1914120c61b115da807a217?apiKey=0bd28f9e8acc4abb9f13a67eccfbb225&" alt="DocBank logo" class="shrink-0 aspect-[0.99] w-[77px]" />
+              <h1 class="text-xl">DocBank</h1>
+          </div>
+  
+          <!-- Hamburger menu button for smaller screens -->
+          <button id="hamburger" class="p-4 lg:hidden">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          </button>
+  
+          <!-- Centered navigation links with specific styles for large screens -->
+          <div class="hidden lg:flex justify-center items-center flex-1">
+              <div class="flex justify-center flex-grow">
+                  <a href="#" class="py-2 px-4 text-white hover:text-violet-600 lg:text-zinc-600 lg:hover:bg-transparent">Features</a>
+                  <a href="#" class="py-2 px-4 text-white hover:text-violet-600 lg:text-zinc-600 lg:hover:bg-transparent">Pricing</a>
+                  <a href="#" class="py-2 px-4 text-white hover:text-violet-600 lg:text-zinc-600 lg:hover:bg-transparent">Company</a>
+                  <a href="#" class="py-2 px-4 text-white hover:text-violet-600 lg:text-zinc-600 lg:hover:bg-transparent">Blog</a>
+              </div>
+              <!-- Right-aligned "Log in" and "Get Started" on large screens -->
+              <div class="flex items-center gap-x-4">
+                  <a href="#" class="hidden lg:block text-zinc-600 hover:text-violet-600">Log in</a>
+                  <button class="hidden lg:block py-2 px-4 text-white bg-violet-600 rounded-sm hover:bg-violet-700">Get Started</button>
+              </div>
+          </div>
+  
+          <!-- Dropdown Menu for smaller screens -->
+          <div class="absolute top-full left-0 z-50 w-full text-white hidden" id="mobile-menu">
+              <a href="#" class="block py-2 text-center bg-violet-600 hover:bg-violet-700">Features</a>
+              <a href="#" class="block py-2 text-center bg-violet-600 hover:bg-violet-700">Pricing</a>
+              <a href="#" class="block py-2 text-center bg-violet-600 hover:bg-violet-700">Company</a>
+              <a href="#" class="block py-2 text-center bg-violet-600 hover:bg-violet-700">Blog</a>
+              <a href="#" class="block py-2 text-center bg-violet-500 hover:bg-violet-700">Log in</a>
+              <button class="w-full py-2  bg-violet-500 rounded-sm hover:bg-violet-800 text-center">Get Started</button>
+          </div>
+      </nav>
+  </header>
+  
+
+    <!--==================== Hero Section ====================-->
+    <hero class="flex flex-col items-center px-5 mt-10 mx-6 w-full max-w-[1112px] lg:mt-28 lg:mx-36">
+      <!-- Content section -->
+      <section class="self-stretch w-full">
+        <!-- Image and text container -->
+        <div class="flex flex-col-reverse items-center gap-5 lg:flex-row lg:justify-between">
+          <!-- Text content -->
+          <div class="w-full lg:w-[43%]">
+
+            <h1 class="text-4xl font-bold leading-tight text-black mt-10 lg:mt-0 lg:text-5xl lg:leading-tight">
+              <span class="block">The Doc</span>
+              <span class="block">Ecosystem for </span>
+              <span class="block">what's important.</span>
+            </h1>
+            
+            <p class="mt-9 mb-6 leading-7">
+              The only documentation system you need to save and manage all your important paperwork.
+            </p>
+            <a href="#" class="justify-center self-start px-5 py-3 mt-11 font-medium text-white bg-violet-600 rounded-sm leading-[120%]">
+              Get Started
+            </a>
+          </div>
+          <!-- Image content -->
+          <div class="w-full lg:w-[57%]">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/de3f5bd09f69fe601b2c08dc9be81c9c596340dc2c0e3cbb6febda83157e8cdc?apiKey=0bd28f9e8acc4abb9f13a67eccfbb225&"
+              alt="DocBank app interface"
+              class="w-full mt-10 lg:mt-0"
+            />
+          </div>
+        </div>
       </section>
-    </main>
+    
+      <!-- TRUSTED BY section -->
+      <div class="w-full text-sm font-bold leading-4 text-black mt-20 lg:mt-10 lg:text-left">
+        TRUSTED BY
+      </div>
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/c8e0909680233b442aa8763aee306c2d3fa1e32b8e71fbf45aedc34d1e6cacbb?apiKey=0bd28f9e8acc4abb9f13a67eccfbb225&"
+        alt="Trusted company logo"
+        class="w-11 aspect-square mt-9"
+      />
+    </hero>
+    
+  
+    <!--====================  Section ====================-->
+
+    <section
+      class="flex justify-center items-center px-16 py-20 mt-24 w-full bg-violet-600 max-md:px-5 max-md:mt-10 max-md:max-w-full"
+    >
+      <div class="flex flex-col mb-8 w-full max-w-[1100px] max-md:max-w-full">
+        <h2
+          class="self-center text-3xl font-bold leading-10 text-center text-white w-[606px] max-md:max-w-full"
+        >
+          Important data and documents organised with AI
+        </h2>
+        <div class="mt-20 max-md:mt-10 max-md:max-w-full">
+          <div class="flex gap-5 max-md:flex-col max-md:gap-0">
+            <div class="flex flex-col w-[56%] max-md:ml-0 max-md:w-full">
+              <div
+                class="flex flex-col mt-11 text-base text-white max-md:mt-10 max-md:max-w-full"
+              >
+                <p class="leading-7 max-md:max-w-full">
+                  With AI-powered document classification and indexing, users
+                  can quickly find the right documents using natural language
+                  searches, reducing manual effort and increasing efficiency.
+                  This product provides a secure, scalable platform that can
+                  accommodate growing document libraries, while offering
+                  flexible access control and collaboration features.
+                </p>
+                <a
+                href="#"
+                class="mt-10 font-medium leading-[175%] relative inline-block text-white hover:text-purple-500 transition-colors duration-300"
+                style="text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px;"
+                >Learn more</a>
+                            
+                
+
+              </div>
+            </div>
+            <div class="flex flex-col ml-5 w-[44%] max-md:ml-0 max-md:w-full">
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/7fe6e5af71eb818c1a2c3dd5232e110fd4aab3ce4c77e3f2a49cbdbaae5c4b6c?apiKey=0bd28f9e8acc4abb9f13a67eccfbb225&"
+                alt="AI document classification"
+                class="w-full aspect-square max-md:mt-10 max-md:max-w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!--====================  Section ====================-->
+<!-- Mobile View with Background Shapes -->
+<div class="md:hidden">
+  <section class="flex flex-col px-6 pt-5 text-black leading-[120%] max-w-[336px] mx-auto my-5 relative">
+    <!-- Background shapes -->
+    <div class="absolute inset-0 flex justify-center items-center">
+      <div class="w-80 h-80 bg-white bg-opacity-20 rounded-lg backdrop-blur-3xl"></div>
+      <div class="w-44 h-44 bg-violet-600 rounded-lg absolute top-0 left-0"></div>
+      <div class="w-44 h-44 bg-violet-600 rounded-lg absolute bottom-0 right-0"></div>
+    </div>
+  
+    <!-- Content -->
+    <article class="flex flex-col px-4 py-8 mt-5 rounded-lg backdrop-blur-2xl bg-white bg-opacity-20 relative z-10">
+      <h2 class="text-2xl font-bold leading-9">
+        Start your journey with DocBank and worry about your docs no more!
+      </h2>
+      <p class="self-start mt-5 text-sm">
+        Contact us for pricing and availability.
+      </p>
+      <button class="justify-center px-4 py-2 mt-6 text-sm font-medium text-white bg-violet-600 rounded-sm">
+        Contact us
+      </button>
+    </article>
+  </section>
+</div>
+
+<!-- Medium and Larger Screen View -->
+<div class="hidden md:block self-center mx-36 mt-36 w-full max-w-[1029px]">
+  <div class="flex gap-5">
+    <div class="flex flex-col w-[57%]">
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/8064b88d77d2fcdfe708bb3a629d0590e18796cec7cfaf9dc1c429c03b186fdf?apiKey=0bd28f9e8acc4abb9f13a67eccfbb225&"
+        alt="DocBank app on mobile devices"
+        class="grow w-full aspect-[1.01]"
+      />
+    </div>
+    <div class="flex flex-col ml-5 w-[43%]">
+      <div class="flex flex-col self-stretch px-5 my-auto text-base text-black">
+        <h2 class="text-3xl font-bold leading-10">
+          Start your journey with DocBank and worry about your docs no more!
+        </h2>
+        <p class="mt-8 leading-[175%]">
+          Contact us for pricing and availability.
+        </p>
+        <a
+          href="#"
+          class="justify-center self-start px-5 py-3 mt-6 font-medium text-white bg-violet-600 rounded-sm leading-[120%]"
+        >Contact us</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!--====================  Footer ====================-->
+<!-- Mobile Footer -->
+<div class="block md:hidden bg-black text-white relative" style="width: 430px; height: 670px;">
+<section class="flex flex-col items-start px-0  text-sm leading-4 bg-black max-w-[430px]">
+  <div class="flex gap-5 justify-between self-stretch">
+    <div class="flex flex-col">
+      <div class="flex gap-0 font-bold text-white whitespace-nowrap">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c184c231f753cbe17f86f77f5be00a3c80b8a7cbfddbc03bb24f1dd56713477?apiKey=0bd28f9e8acc4abb9f13a67eccfbb225&" alt="DocBank logo" class="shrink-0 aspect-[0.97] w-[70px]" />
+        <h1 class="self-start mt-9">DocBank</h1>
+      </div>
+      <nav class="flex flex-col px-4 mt-11 font-medium text-neutral-500">
+        <h2>Features</h2>
+        <ul class="mt-9 leading-7 text-gray-200">
+          <li>SSO</li>
+          <li>API Integration</li>
+          <li>App Directory</li>
+        </ul>
+        <h2 class="mt-12">Company</h2>
+        <ul class="mt-8 leading-7 text-gray-200">
+          <li>About us</li>
+          <li>Careers</li>
+          <li>Leadership</li>
+        </ul>
+      </nav>
+    </div>
+    <div class="flex flex-col self-end mt-28 font-medium text-neutral-500">
+      <h2>Pricing</h2>
+      <ul class="mt-8 leading-7 text-gray-200">
+        <li>Education</li>
+        <li>Enterprise</li>
+        <li>Pro</li>
+      </ul>
+      <h2 class="mt-14">Blog</h2>
+      <ul class="mt-8 leading-7 text-gray-200">
+        <li>DocBank 101</li>
+        <li>Using Tables in DocBank</li>
+      </ul>
+    </div>
+  </div>
+  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c67839925cf2a277429b392f50bf2cb27fee8b5f1792c548978215c31c6ff931?apiKey=0bd28f9e8acc4abb9f13a67eccfbb225&" alt="App store badges" class="mt-16 ml-5 max-w-full aspect-[4.55] w-[133px]" />
+  <footer class="flex gap-5 mt-16 ml-5 text-neutral-500">
+    <p class="grow">© 2023 All rights reserved</p>
+    <p>Impressum</p>
+  </footer>
+</section>
+</div>
+
+<!-- Footer for Medium and Larger Screens -->
+<footer class="hidden md:flex flex-col items-center px-16 pt-16 pb-9 mt-36 w-full bg-black">
+  <div class="flex flex-col items-center w-full max-w-[1040px]">
+    <div class="self-stretch">
+      <div class="flex gap-5">
+        <div class="flex flex-col w-[29%]">
+          <div class="flex gap-1.5 text-sm font-bold leading-4 text-white">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c184c231f753cbe17f86f77f5be00a3c80b8a7cbfddbc03bb24f1dd56713477?apiKey=0bd28f9e8acc4abb9f13a67eccfbb225&" alt="DocBank logo" class="shrink-0 aspect-[0.97] w-[70px]" />
+            <div class="my-auto">DocBank</div>
+          </div>
+        </div>
+        <div class="flex flex-col ml-5 w-[71%]">
+          <div class="grow mt-12">
+            <div class="flex gap-5">
+              <!-- Feature Column -->
+              <div class="flex flex-col w-[26%]">
+                <h3 class="font-medium text-neutral-500">Features</h3>
+                <div class="mt-9 text-gray-200">SSO<br>API Integration<br>App Directory</div>
+              </div>
+              <!-- Pricing Column -->
+              <div class="flex flex-col ml-5 w-[19%]">
+                <h3 class="font-medium text-neutral-500">Pricing</h3>
+                <div class="mt-8 text-gray-200">Education<br>Enterprise<br>Pro</div>
+              </div>
+              <!-- Company Column -->
+              <div class="flex flex-col ml-5 w-1/5">
+                <h3 class="font-medium text-neutral-500">Company</h3>
+                <div class="mt-8 text-gray-200">About us<br>Careers<br>Leadership</div>
+              </div>
+              <!-- Blog Column -->
+              <div class="flex flex-col ml-5 w-[35%]">
+                <h3 class="font-medium text-neutral-500">Blog</h3>
+                <div class="mt-8 text-gray-200">DocBank 101<br>Using Tables in DocBank</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c67839925cf2a277429b392f50bf2cb27fee8b5f1792c548978215c31c6ff931?apiKey=0bd28f9e8acc4abb9f13a67eccfbb225&" alt="App store badges" class="mt-16 ml-5 max-w-full aspect-[4.55] w-[133px]" />
+    <div class="flex gap-5 mt-16 text-neutral-500">
+      <div>© 2023 All rights reserved</div>
+      <a href="#">Impressum</a>
+    </div>
+  </div>
+</footer>
+
   </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        hamburger.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+    });
+    </script>
+    
+    
 </html>
